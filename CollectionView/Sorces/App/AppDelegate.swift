@@ -20,22 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let offerViewController = OfferViewController()
         let offerNavigationController = UINavigationController(rootViewController: offerViewController)
         
-        let mainViewController = MainViewController()
-        let mainNavigationController = UINavigationController(rootViewController: mainViewController)
+        let albumViewController = AlbumViewController()
+        let albumNavigationController = UINavigationController(rootViewController: albumViewController)
         
         let searchViewController = SearchViewController()
         let searchNavigationController = UINavigationController(rootViewController: searchViewController)
         
         mediaViewController.tabBarItem = UITabBarItem(title: "Медиатека", image: UIImage(systemName: "photo.fill.on.rectangle.fill"), tag: 0)
         offerViewController.tabBarItem = UITabBarItem(title: "Для Вас", image: UIImage(systemName: "heart.text.square.fill"), tag: 1)
-        mainViewController.tabBarItem = UITabBarItem(title: "Альбомы", image: UIImage(systemName: "rectangle.stack.fill"), tag: 2)
+        albumViewController.tabBarItem = UITabBarItem(title: "Альбомы", image: UIImage(systemName: "rectangle.stack.fill"), tag: 2)
         searchViewController.tabBarItem = UITabBarItem(title: "Поиск", image: UIImage(systemName: "magnifyingglass"), tag: 3)
         
         let tabBarController = UITabBarController()
         tabBarController.setViewControllers([
             mediaNavigationController,
             offerNavigationController,
-            mainNavigationController,
+            albumNavigationController,
             searchNavigationController
         ], animated: true)
         
